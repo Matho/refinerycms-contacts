@@ -8,7 +8,7 @@
 
         <div class="field ">
           <%= f.label :recipient_id %>
-          <%= f.collection_select :recipient_id, @page.mails.obfuscated, :id, :mail, {:prompt=> true} %>
+          <%= f.collection_select :recipient_id, @page.mails.obfuscated, :id, :mail, { :prompt=> ((@page.mails.obfuscated.length > 1) ? true : false) } %>
         </div>
 
 
