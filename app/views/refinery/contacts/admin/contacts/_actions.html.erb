@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Contacts::Admin::ContactsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.contacts_admin_contacts_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_contacts_admin_contact_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Contacts::Admin::ContactsController.sortable? && ::Refinery::Contacts::Contact.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Contacts"),
+                 refinery.contacts_admin_contacts_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Contacts"),
+                 refinery.contacts_admin_contacts_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,80 @@
+en:
+  refinery:
+    plugins:
+      contacts:
+        title: Contacts
+        tab_name: Contact form
+    admin:
+      pages:
+        tabs:
+          contacts:
+            form:
+              show_contact_info: Show contact informations
+              contact_info_help: Show contact informations like company title, adress, telephone number ...
+              show_contact_form_for: Show contact form for
+              choose_contact: Click to choose contact
+    contacts:
+      admin:
+        contacts:
+          mail_fields:
+            remove: remove
+          form:
+            add_mail: Add e-mail
+          actions:
+            create_new: Add New Contact
+            reorder: Reorder Contacts
+            reorder_done: Done Reordering Contacts
+          records:
+            title: Contacts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Contacts yet. Click "Add New Contact" to add your first contact.
+          contact:
+            view_live_html: View this contact live <br/><em>(opens in a new window)</em>
+            edit: Edit this contact
+            delete: Remove this contact forever
+      contacts:
+        flash:
+          successfull_delivery: E-mail was send successfully.
+        show:
+          web: 'Web:'
+          tel: 'Tel.:'
+          fax: 'Fax:'
+        form:
+          submit: Send
+          antispam: Antispam
+        error_info:
+          problems_in_following_fields: Problems in following fields
+  activerecord:
+    attributes:
+      refinery/contact_page:
+        contact_info: Contact information
+      refinery/contacts/mail:
+        mail: E-mail
+      refinery/contacts/contact:
+        title: Title
+        street: Street
+        city: City
+        zip_code: Zip Code
+        province: Province
+        country: Country
+        tel1: Tel1
+        tel2: Tel2
+        tel3: Tel3
+        fax: Fax
+        company: Company
+        homepage: Homepage (starts with http://)
+
+  activemodel:
+    attributes:
+      refinery/contacts/mail_message:
+        recipient_id: Recipient
+        name: Name
+        subject: Subject
+        text: Text
+        sender_mail: Your e-mail
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: Captcha code is incorrect
+      verification_failed: Captcha code is incorrect
+      recaptcha_unavailable: Captcha verification failed. Please try again.
+      recaptcha-not-reachable: Captcha verification failed. Please try again.

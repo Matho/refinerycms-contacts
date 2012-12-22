@@ -1,0 +1,93 @@
+<%= form_for [refinery, :contacts_admin, @contact] do |f| -%>
+    <%= render '/refinery/admin/error_messages',
+               :object => @contact,
+               :include_object_name => true %>
+
+
+    <div class='field'>
+      <%= f.label :title -%>
+      <%= f.text_field :title, :class => 'larger widest'  -%>
+    </div>
+
+    <fieldset>
+       <legend>E-mail</legend>
+
+    <%= f.fields_for :mails do |builder| %>
+        <%= render "mail_fields", :f=> builder %>
+    <% end %>
+
+    <%= link_to_add_fields t('.add_mail'), f, :mails %>
+    </fieldset>
+
+    <div class='field'>
+      <%= f.label :company -%>
+      <%= f.text_field :company -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :street -%>
+      <%= f.text_field :street  -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :city -%>
+      <%= f.text_field :city  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :zip_code -%>
+      <%= f.text_field :zip_code  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :province -%>
+      <%= f.text_field :province  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :country -%>
+      <%= f.text_field :country  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :homepage -%>
+      <%= f.text_field :homepage  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :tel1 -%>
+      <%= f.text_field :tel1  -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :tel2 -%>
+      <%= f.text_field :tel2  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :tel3 -%>
+      <%= f.text_field :tel3  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :fax -%>
+      <%= f.text_field :fax  -%>
+
+    </div>
+
+
+
+
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => false,
+               :delete_title => t('delete', :scope => 'refinery.contacts.admin.contacts.contact'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @contact.title) %>
+<% end -%>

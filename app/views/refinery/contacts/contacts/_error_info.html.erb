@@ -1,0 +1,15 @@
+<% if flash[:mail_message] # Rendering errors  %>
+    <div class="errorExplanation" id="errorExplanation">
+      <p><%= t('.problems_in_following_fields') %>:</p>
+      <ul>
+        <% unless Refinery::Contacts.client_side_validations  %>
+            <% flash[:mail_message].errors.full_messages.each do |value| %>
+                <li><%= value %></li>
+            <% end %>
+        <% end %>
+        <% if flash[:recaptcha_error].present? %>
+            <li><%= t("recaptcha.errors.#{flash[:recaptcha_error]}") %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

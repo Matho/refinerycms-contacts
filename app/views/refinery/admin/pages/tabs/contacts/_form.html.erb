@@ -1,0 +1,24 @@
+<%= f.fields_for @page.contact_page do |contact_page_form| %>
+    <%= contact_page_form.label :contact_id,  t('.show_contact_form_for')  %>
+    <%= contact_page_form.collection_select( :contact_id, Refinery::Contacts::Contact.all, :id, :title,
+                                             { :include_blank => true},
+                                             { :data => {
+                                                     :placeholder=> t('.choose_contact')},
+                                               :multiple=> false,
+                                               :class=> "chzn-select-deselect",
+                                               :style=>"min-width: 300px;"
+                                             }) %> <br/> <br/>
+
+    <div class='field'>
+      <span class='label_with_help'>
+        <%= contact_page_form.label :contact_info %>
+        <%= refinery_help_tag t('.contact_info_help') %>
+      </span>
+      <%= contact_page_form.check_box :contact_info %>
+      <%= contact_page_form.label :contact_info, t('.show_contact_info'), :style=>"display:inline;"   %>
+    </div>
+<% end %>
+
+
+
+

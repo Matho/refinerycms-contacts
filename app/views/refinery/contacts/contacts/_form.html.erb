@@ -1,0 +1,47 @@
+<% if @page.mails.present?  %>
+    <%= form_for (flash[:mail_message].present?) ? flash[:mail_message] : Refinery::Contacts::MailMessage.new ,
+                 :url=> deliver_contacts_mail_messages_path,
+                 :validate => true  do |f| %>
+
+        <%= render  'refinery/contacts/contacts/success_info' %>
+        <%= render  'refinery/contacts/contacts/error_info' %>
+
+
+        <div class="field ">
+          <%= f.label :recipient_id %>
+          <%= f.collection_select :recipient_id, @page.mails, :id, :mail, {:prompt=> true} %>
+        </div>
+
+
+        <div class="field ">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="field ">
+          <%= f.label :sender_mail %>
+          <%= f.text_field :sender_mail %>
+        </div>
+
+        <div class="field ">
+          <%= f.label :subject %>
+          <%= f.text_field :subject%>
+        </div>
+
+        <div class="field ">
+          <%= f.label :text %>
+          <%= f.text_area :text, :rows=>"7", :cols=>"55" %>
+        </div>
+
+        <div class="field ">
+          <%= f.label t('.antispam') %>
+          <%= recaptcha_tags  %>
+        </div>
+
+        <div class="field">
+          <%= f.label " " %>
+          <%= f.submit t('.submit') %>
+        </div>
+    <% end %>
+
+<% end %>

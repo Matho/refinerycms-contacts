@@ -1,0 +1,8 @@
+<% if flash[:notice]  # Success %>
+    <div id="flash_container">
+      <div id="flash" class="flash flash_notice" style='visibility: hidden;' >
+        <%= flash[:notice] %>
+        <%= link_to t("refinery.message.close_this_message"), "", :id => "flash_close" %>
+      </div>
+    </div>
+<% end %>

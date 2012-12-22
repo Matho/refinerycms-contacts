@@ -1,0 +1,50 @@
+<%# cache "refinery/contacts/contact/#{@page.contact.id}" do # Because of flash error rendering, caching is now commented %>
+<% if @page.contact.present? %>
+    <% if @page.contact_page.contact_info %>
+        <% if @page.contact.company.present? %>
+            <strong><%= @page.contact.company %></strong><br/>
+        <% end %>
+
+        <% if @page.contact.street.present? %>
+            <%= @page.contact.street %><br/>
+        <% end %>
+
+        <% if @page.contact.city.present? %>
+            <%= @page.contact.city %> <%= @page.contact.zip_code %><br>
+        <% end %>
+
+        <% if @page.contact.province.present? %>
+            <%= @page.contact.province %><br/>
+        <% end %>
+
+        <% if @page.contact.country.present? %>
+            <%= @page.contact.country %><br/>
+        <% end %>
+
+        <br/>
+        <% if @page.contact.homepage.present? %>
+            <strong><%= t('.web') %></strong>
+            <%= link_to @page.contact.homepage, @page.contact.homepage, :target=>"_blank" %><br/>
+        <% end %>
+
+        <% if @page.contact.tel1.present? || @page.contact.tel2.present? || @page.contact.tel3.present? %>
+            <strong><%= t('.tel') %></strong>
+            <%= [@page.contact.tel1 , @page.contact.tel2, @page.contact.tel3 ].reject{|c| c.empty?}.join(' , ') %><br>
+        <% end %>
+
+        <% if @page.contact.fax.present?  %>
+            <strong><%= t('.fax') %></strong>
+            <%= @page.contact.fax %><br/>
+        <% end %>
+    <% end %>
+
+    <%= render :partial=> 'refinery/contacts/contacts/form' %>
+<% end %>
+
+
+
+
+
+<%# end %>
+
+

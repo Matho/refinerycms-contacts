@@ -1,0 +1,12 @@
+<div class='wym_skin_refinery page_part'>
+  <%= render '/refinery/admin/pages/tabs/contacts/contacts_bar' %>
+
+  <div id="contacts_wym_editation" class='wym_box field ' style="height: 300px;">
+    <% if @page.contact_page.nil?
+         @page.build_contact_page
+       end %>
+
+
+    <%= render "/refinery/admin/pages/tabs/contacts/form", :f => f %>
+  </div>
+</div>

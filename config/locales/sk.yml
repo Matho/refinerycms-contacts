@@ -1,0 +1,80 @@
+sk:
+  refinery:
+    plugins:
+      contacts:
+        title: Kontakty
+        tab_name: Kontaktný formulár
+    admin:
+      pages:
+        tabs:
+          contacts:
+            form:
+              show_contact_info: Zobraziť kontaktné informácie
+              contact_info_help: Zobrazí na stránke informácie ako názov spoločnosti, telefónny kontakt, adresa a pod.
+              show_contact_form_for: Zobraziť kontaktný formulár pre
+              choose_contact: Kliknite pre výber kontaktu
+    contacts:
+      admin:
+        contacts:
+          mail_fields:
+            remove: odstrániť
+          form:
+            add_mail: Pridať e-mail
+          actions:
+            create_new: Pridať kontakt
+            reorder: Preusporiadať kontakty
+            reorder_done: Uložiť usporiadanie kontaktov
+          records:
+            title: Kontakty
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne kontakty. Kliknite na "Pridať kontakt" pre pridanie prvého kontaktu.
+          contact:
+            view_live_html: Zobraziť náhľad kontaktu<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť kontakt
+            delete: Zmazať kontakt
+      contacts:
+        flash:
+          successfull_delivery: E-mail bol úspešne odoslaný.
+        show:
+          web: 'Web:'
+          tel: 'Tel.:'
+          fax: 'Fax:'
+        form:
+          submit: Odoslať
+          antispam: Antispam
+        error_info:
+          problems_in_following_fields: Vyskytli sa nasledovné problémy
+  activerecord:
+    attributes:
+      refinery/contact_page:
+        contact_info: Kontaktné informácie
+      refinery/contacts/mail:
+        mail: E-mail
+      refinery/contacts/contact:
+        title: Názov
+        street: Ulica
+        city: Mesto
+        zip_code: PSČ
+        province: Provincia
+        country: Štát
+        tel1: Tel. č1
+        tel2: Tel. č2
+        tel3: Tel. č3
+        fax: Fax
+        company: Spoločnosť
+        homepage: Webová stránka (začína http://)
+
+  activemodel:
+    attributes:
+      refinery/contacts/mail_message:
+        recipient_id: Adresát
+        name: Meno
+        subject: Predmet
+        text: Text
+        sender_mail: Váš e-mail
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: Captcha kód je zadaný nesprávne
+      verification_failed: Captcha kód je zadaný nesprávne
+      recaptcha_unavailable: Nepodarilo sa verifikovať captchu. Skúste odoslať formulár opäť.
+      recaptcha-not-reachable: Nepodarilo sa verifikovať captchu. Skúste odoslať formulár opäť.
