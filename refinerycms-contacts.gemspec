@@ -11,9 +11,8 @@ Gem::Specification.new do |s|
   s.description       = 'Ruby on Rails Contacts extension for Refinery CMS'
   s.summary           = 'Attach contact form to any page in Refinery CMS'
   s.email             = %q{martin.markech@matho.sk}
-  s.homepage          = %q{http://github.com/Matho/refinerycms-contact-form}
-  s.authors           = ['Martin Markech']
-  s.license           = %q{MIT}
+  s.homepage          = %q{http://github.com/Matho/refinerycms-contacts}
+  s.authors           = 'Martin Markech'
   s.require_paths     = %w(lib)
 
   s.files             = `git ls-files`.split("\n")
