@@ -2,6 +2,7 @@ module Refinery
   module Contacts
     class Contact < Refinery::Core::BaseModel
       has_many :mails
+      default_scope order("position DESC")
 
       accepts_nested_attributes_for :mails, :allow_destroy => true
 
