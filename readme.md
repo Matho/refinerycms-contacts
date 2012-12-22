@@ -16,6 +16,7 @@ This version supports Rails 3.2.x and Refinery CMS ~> 2.0.9. (Should work with ~
 * send email
 * server side validation, client side validation ( optional )
 * recaptcha
+* email obfuscation in selectbox on frontend
 
 
 ## Screenshots
