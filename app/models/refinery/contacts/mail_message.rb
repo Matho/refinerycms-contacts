@@ -1,7 +1,7 @@
 module Refinery
   module Contacts
     class MailMessage < TableLessModel
-      attr_accessor :name, :recipient_id, :subject, :text, :sender_mail, :code, :recipient_mail
+
 
       validates :name,         :presence => true
       validates :recipient_id, :presence => true

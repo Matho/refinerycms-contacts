@@ -30,7 +30,6 @@ module Refinery
             end
           end
 
-          attr_accessible :contact_page
         end
       end
     end

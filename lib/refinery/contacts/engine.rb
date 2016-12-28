@@ -16,9 +16,6 @@ module Refinery
           plugin.name = "contacts"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.contacts_admin_contacts_path }
           plugin.pathname = root
-          plugin.activity = {
-            :class_name => :'refinery/contacts/contact'
-          }
           
         end
       end

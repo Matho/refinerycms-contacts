@@ -4,7 +4,7 @@ Refinery::Core::Engine.routes.append do
   namespace :contacts, :path => '' do
     resources :mail_messages, :only => :deliver do
       collection do
-        post :deliver, :as => :deliver
+        post :deliver
       end
     end
   end

@@ -5,7 +5,5 @@ module Refinery
     belongs_to :page, :polymorphic => true
 
 
-    attr_accessible :page_id, :page_type, :contact_id , :contact_info
-
   end
 end

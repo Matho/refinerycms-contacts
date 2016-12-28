@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   #s.test_files        = `git ls-files -- spec/*`.split("\n")
 
   # Runtime dependencies
-  s.add_dependency             'refinerycms-core',    '~> 2.0.9' # should work ~> 2.0.0 , not tested
-  s.add_dependency             'recaptcha'
+  s.add_dependency             'refinerycms-core',    '~> 3.0.0'
+  s.add_dependency             'recaptcha', '~> 3.4.0'
 
   # Development dependencies (usually used for testing)
-  # s.add_development_dependency 'refinerycms-testing', '~> 2.0.9'
+   s.add_development_dependency 'refinerycms-testing', '~> 3.0.0'
 end
