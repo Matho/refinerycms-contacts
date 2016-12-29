@@ -164,7 +164,6 @@ rake assets:precompile
 ## Todo list
 
 * add js pop-up in page's tab to allow create contact "in-place" instead of clicking through menu
-* tests :(
 
 ## Code
 
@@ -176,7 +175,10 @@ rake assets:precompile
 * reCaptcha validation shows errors both for incorrect-captcha-sol and verification_failed key
 
 ## Testing
-TODO
+* cd to this engine path
+* bundle install
+* rake refinery:testing:dummy_app
+* rake spec
 
 ## License
 
