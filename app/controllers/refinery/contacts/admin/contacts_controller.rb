@@ -10,7 +10,7 @@ module Refinery
         protected
 
         def contact_params
-          params.require(:contact).permit(:title, :street, :city, :zip_code, :homepage, :company, :province, :country, :tel1, :tel2, :tel3, :fax, :position, :mails_attributes, :mails_attributes => [:id, :mail, :_destroy ])
+          params.require(:contact).permit(:title, :street, :city, :zip_code, :homepage, :company, :province, :country, :tel1, :tel2, :tel3, :fax, :position, :mails_attributes => [:id, :mail, :_destroy ])
         end
       end
     end

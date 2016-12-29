@@ -6,7 +6,7 @@ Attach contact form to any page with contact information
 
 ## Requirements
 
-This version supports Rails 3.2.x and Refinery CMS ~> 2.0.9. (Should work with ~> 2.0.0, not tested)
+This version supports Rails 4.2.x and Refinery CMS ~> 3.0.0.
 
 ## Features
 
@@ -38,7 +38,7 @@ Gem is translated to slovak and english.
 Open up your ``Gemfile`` and add at the bottom this line:
 
 ```ruby
-gem 'refinerycms-contacts', '~> 0.1.0'
+gem 'refinerycms-contacts', '~> 0.2.0'
 ```
 
 Now, run
@@ -63,6 +63,18 @@ Seed your database:
 
 ```ruby
 rake db:seed
+```
+
+Override PagesContoller to get strong params work
+
+```ruby
+rake refinery:override controller=admin/pages_controller
+```
+
+Open that file, find function permitted_page_params and append
+
+```ruby
+contact_page: [:contact_id,:contact_info]
 ```
 
 ### Assets + views
