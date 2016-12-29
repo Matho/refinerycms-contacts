@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   # Runtime dependencies
   s.add_dependency             'refinerycms-core',    '~> 3.0.0'
-  s.add_dependency             'recaptcha', '~> 3.4.0'
+  s.add_dependency             'recaptcha', '~> 0.3.4'
 
   # Development dependencies (usually used for testing)
    s.add_development_dependency 'refinerycms-testing', '~> 3.0.0'

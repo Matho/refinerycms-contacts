@@ -4,6 +4,7 @@ gemspec
 
 gem 'refinerycms', '~> 2.0.3'
 gem 'refinerycms-i18n', '~> 2.0.2'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Database Configuration
 platforms :jruby do

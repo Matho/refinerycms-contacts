@@ -1,14 +1,13 @@
 <% if @page.mails.present?  %>
     <%= form_for (flash[:mail_message].present?) ? flash[:mail_message] : Refinery::Contacts::MailMessage.new ,
-                 :url=> deliver_contacts_mail_messages_path,
-                 :validate => true  do |f| %>
+                 :url=> deliver_contacts_mail_messages_path  do |f| %>
 
         <%= render  'refinery/contacts/contacts/success_info' %>
         <%= render  'refinery/contacts/contacts/error_info' %>
 
         <div class="field ">
           <%= f.label :recipient_id %>
-          <%= f.collection_select :recipient_id, @page.mails.obfuscated, :id, :mail, { :prompt=> ((@page.mails.length > 1) ? true : false) } %>
+          <%= f.collection_select :recipient_id, @page.mails, :id, :mail, { :prompt=> ((@page.mails.length > 1) ? true : false) } %>
         </div>
 
 
