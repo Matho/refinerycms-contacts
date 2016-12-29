@@ -1,6 +1,6 @@
 <div class='field'>
   <%= f.label :mail %>
-  <%= f.text_field :mail %>
+  <%= f.text_field :mail, :class=>"mail_field" %>
 
   <%= f.hidden_field :_destroy  %>
   <%= link_to t('.remove'), '#', :class=>"remove_fields" %>
